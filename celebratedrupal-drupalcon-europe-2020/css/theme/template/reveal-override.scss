@@ -1,0 +1,94 @@
+/*********************************************
+* OVERRIDE STYLES
+*********************************************/
+
+.reveal section.intro-slide {
+    top: 22rem;
+}
+
+.reveal section.dark-background {
+    color: $mainColor;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $headingColor;
+    }
+
+    a {
+        color: $linkColor;
+
+        &:hover {
+            color: $linkColorHover;
+        }
+    }
+}
+
+header {
+    z-index: 1;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 0.5em;
+    padding: 0.5em;
+    background: rgba(220, 220, 220, 0.2);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 1px 2px rgba(220, 220, 220, 0.6);
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 25%;
+}
+
+.reveal {
+    h1.dark-text,
+    h2.dark-text,
+    h3.dark-text,
+    h4.dark-text,
+    h5.dark-text,
+    h6.dark-text {
+        color: $darkColor;
+    }
+}
+
+.dark-text {
+    color: $darkColor;
+}
+
+a {
+    font-weight: bold;
+}
+
+[data-id="celebrate"],
+[data-id="why-celebrate"],
+[data-id="chapter-design"],
+[data-id="chapter-marketing"],
+[data-id="chapter-development"],
+[data-id="chapter-content"] {
+    p {
+        text-align: left;
+    }
+
+    blockquote p {
+        text-align: center;
+    }
+
+    ol, dl, ul {
+        display: block;
+    }
+}
+
+img.move-up-down {
+    animation: mover 12s ease-in-out infinite alternate;
+    animation-delay: 4s;
+}
+
+@keyframes mover {
+    0% { transform: translateY(0); }
+    20% { transform: translateY(0); }
+    80% { transform: translateY(-20em); }
+    100% { transform: translateY(-20em); }
+}

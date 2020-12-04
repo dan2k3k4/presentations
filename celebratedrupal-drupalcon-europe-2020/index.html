@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>
+      Celebrate Drupal: Building a platform to bring people together
+    </title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/reveal.js-verticator/plugin/verticator/verticator.css"
+    />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <header>
+        <h2 class="dark-text">Dan Lemon</h2>
+        <h3
+          class="dark-text"
+          style="text-transform: initial; line-height: 0.4em"
+        >
+          @dan2k3k4
+        </h3>
+        <h3
+          class="dark-text"
+          style="text-transform: initial; line-height: 0.4em"
+        >
+          d.o/dan2k3k4
+        </h3>
+        <img
+          title="Amazee Labs"
+          src="./assets/amazee-labs-logo.svg"
+          width="120"
+          style="margin: 10px; object-fit: cover"
+        />
+      </header>
+      <div class="slides">
+        <section
+          data-background-image="./assets/drupalcon-slide-1.png"
+          data-background-size="contain"
+          data-background-color="#fff"
+        ></section>
+
+        <section
+          data-background-image="./assets/drupalcon-slide-2.png"
+          data-background-size="contain"
+          data-background-color="#fff"
+          class="intro-slide"
+        >
+          <h3 style="line-height: 1em">
+            Building a platform to bring people together to Celebrate Drupal
+          </h3>
+          <h4 style="line-height: 0.5em; padding-top: 2rem">
+            DrupalCon Europe 2020
+          </h4>
+          <h4 style="line-height: 0.5em">by Dan Lemon</h4>
+          <aside class="notes">
+            HELLO and welcome everyone<br />
+            Please find your seat, there's a few spaces here in the middle.<br />
+            I hope y'all are having a great time at DrupalCon Europe.<br />
+          </aside>
+        </section>
+
+        <section
+          data-markdown="presentation.md"
+          data-separator="^\r?\n---\r?\n$"
+        ></section>
+
+        <section
+          data-background-video="./assets/dconeur-photo.mp4"
+          data-background-size="contain"
+          data-background-video-loop="loop"
+          data-background-video-muted
+          class="center"
+        >
+          <div
+            style="
+              background: rgba(210, 210, 210, 0.9);
+              display: block;
+              padding: 1rem;
+            "
+          >
+            <h2 style="color: #222; font-size: 1.2em">
+              Can you guess all of the buildings?
+            </h2>
+            <p style="font-size: 0.8em">
+              <a
+                style="color: #22b; font-weight: bold"
+                href="https://celebratedrupal.org/2020/drupalcon-europe/photo"
+              >
+                https://celebratedrupal.org/2020/drupalcon-europe/photo
+              </a>
+            </p>
+          </div>
+        </section>
+
+        <section data-state="end" class="center">
+            <h1>Thank you</h1>
+            <h3>DrupalCon Europe 2020</h3>
+        </section>
+      </div>
+    </div>
+    <script type="module">
+      import Reveal from "./dist/reveal.esm.js";
+      import Markdown from "./plugin/markdown/markdown.esm.js";
+      import Highlight from "./plugin/highlight/highlight.esm.js";
+      import Notes from "./plugin/notes/notes.esm.js";
+      import Verticator from "./node_modules/reveal.js-verticator/plugin/verticator/verticator.esm.js";
+
+      Reveal.initialize({
+        hash: true,
+        margin: 0.1,
+        verticator: {
+          darktheme: true,
+          color: "yellow",
+          oppositecolor: "red",
+        },
+        controls: false,
+        controlsTutorial: false,
+        center: false,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [Markdown, Highlight, Notes, Verticator],
+      });
+
+      Reveal.on("slidechanged", (event) => {
+        if (event?.currentSlide?.getAttribute('data-state') === 'play-onboarding') {
+            document.getElementById('onboarding-celebrate-drupal').play();
+        }
+        if (event?.currentSlide?.getAttribute('data-state') === 'play-haircut') {
+            document.getElementById('haircut-deprecation').play();
+        }
+      });
+    </script>
+  </body>
+</html>
