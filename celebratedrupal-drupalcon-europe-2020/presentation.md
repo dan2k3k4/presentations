@@ -1,4 +1,4 @@
-s<!-- .slide: data-background="#BFDBFE" data-auto-animate data-id="welcome" -->
+<!-- .slide: data-background="#BFDBFE" data-auto-animate data-id="welcome" -->
 
 # Welcome
 
